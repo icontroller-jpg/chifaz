@@ -1,0 +1,32 @@
+import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import RebelDashboard from "./components/RebelDashboard/RebelDashboard.js";
+import Login from "./components/Auth/Login.js";
+import Signup from "./components/Auth/Signup.js";
+import AppShell from "./components/Shell/AppShell.js";
+import AssetInventoryPage from "./components/Modules/AssetInventory.js";
+import AssetRegistryPage from "./components/Modules/AssetRegistryPage.js";
+import AssetDiscoveryPage from "./components/Modules/AssetDiscovery.js";
+import CBOMPage from "./components/Modules/CBOM.js";
+import PQCPosturePage from "./components/Modules/PQCPosture.js";
+import PQCReadinessPage from "./components/Modules/PQCReadiness.js";
+import CyberRatingPage from "./components/Modules/CyberRating.js";
+import ReportingPage from "./components/Modules/Reporting.js";
+import { ThemeProvider } from './components/context/ThemeContext.js'
+import KeyRotationPanel from "./components/Modules/KeyRotationPanel.js";
+
+const API_BASE = "https://r3bel-production.up.railway.app";
+
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <Router>
+        <Routes>
+
+          </Route>
+        </Routes>
+      </Router>
+    </ThemeProvider>
+  );
+}
