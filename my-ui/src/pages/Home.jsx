@@ -16,7 +16,7 @@ const DATA = {
   phone: "263777881550",
   phoneDisplay: "+263 77 788 1550",
   contact: "Tyrol",
-  rate: 91,
+  rate: 93,
 };
 
 const steps = [
@@ -140,7 +140,7 @@ function Hero() {
       padding: mobile ? "100px 5vw 60px" : "120px 6vw 80px",
       background: "#FDFAF7",
     }}>
-      <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center", width: "100%" }}>
+      <div style={{ width: "100%", textAlign: "center" }}>
 
         <div style={{ ...show(0.05), display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 24 }}>
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#2EA85A", display: "inline-block", animation: "pulse 2s infinite" }} />
@@ -180,6 +180,7 @@ function Hero() {
           borderRadius: 8, overflow: "hidden",
           boxShadow: "0 2px 20px rgba(0,0,0,0.06)",
           marginBottom: 36,
+          width: "100%",
         }}>
           {[
             { label: "Today's rate", value: `$1 = ${DATA.rate} ₹`, accent: "#B87000" },
@@ -227,7 +228,7 @@ function HowItWorks() {
   const mobile = useIsMobile();
   return (
     <section style={{ background: "#F7F3EE", padding: mobile ? "70px 5vw" : "100px 6vw" }}>
-      <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+      <div style={{ width: "100%" }}>
         <FadeIn>
           <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#B87000", marginBottom: 10 }}>Simple process</p>
           <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, color: "#111", marginBottom: 44, letterSpacing: "-0.02em" }}>
@@ -269,7 +270,7 @@ function Rates() {
 
   return (
     <section id="rates" style={{ background: "#FDFAF7", padding: mobile ? "70px 5vw" : "100px 6vw" }}>
-      <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+      <div style={{ width: "100%" }}>
         <FadeIn>
           <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#B87000", marginBottom: 10 }}>Pricing</p>
           <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, color: "#111", marginBottom: 8, letterSpacing: "-0.02em" }}>
@@ -335,7 +336,7 @@ function WhyChifaz() {
   const mobile = useIsMobile();
   return (
     <section id="why" style={{ background: "#F7F3EE", padding: mobile ? "70px 5vw" : "100px 6vw" }}>
-      <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+      <div style={{ width: "100%" }}>
         <FadeIn>
           <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#B87000", marginBottom: 10 }}>Why us</p>
           <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, color: "#111", marginBottom: 44, letterSpacing: "-0.02em" }}>
@@ -363,7 +364,7 @@ function Contact() {
   const mobile = useIsMobile();
   return (
     <section id="contact" style={{ background: "#111D16", padding: mobile ? "70px 5vw" : "100px 6vw" }}>
-      <div style={{ maxWidth: 520, margin: "0 auto", textAlign: "center" }}>
+      <div style={{ width: "100%", textAlign: "center" }}>
         <FadeIn>
           <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 10 }}>Get started</p>
           <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, color: "white", marginBottom: 12, letterSpacing: "-0.02em" }}>
@@ -376,6 +377,7 @@ function Contact() {
           <div style={{
             background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)",
             borderRadius: 8, padding: mobile ? "28px 20px" : "36px", marginBottom: 24,
+            width: "100%", boxSizing: "border-box",
           }}>
             <div style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 10 }}>
               Call or WhatsApp
@@ -426,6 +428,7 @@ function Footer() {
       justifyContent: mobile ? "center" : "space-between",
       flexDirection: mobile ? "column" : "row",
       gap: 6, textAlign: mobile ? "center" : "left",
+      width: "100%", boxSizing: "border-box",
     }}>
       <div>
         <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 800, fontSize: "0.95rem", color: "#E8B84B" }}>Chifaz Transfer</span>
@@ -440,7 +443,7 @@ function Footer() {
 
 export default function ChifazTransfer() {
   return (
-    <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", background: "#FDFAF7" }}>
+    <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", background: "#FDFAF7", width: "100%" }}>
       <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;1,800&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet"
