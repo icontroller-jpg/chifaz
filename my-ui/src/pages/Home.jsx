@@ -17,7 +17,7 @@ const DATA = {
   phone: "263777881550",
   phoneDisplay: "+263 777 881 550",
   contact: "Tyrol",
-  rate: 93,
+  rate: 96.5,
   fees: { cash: 5, ecocash: 6 },
 };
 
