@@ -14,8 +14,8 @@ const C = {
 };
 
 const DATA = {
-  phone: "+919056397991",
-  phoneDisplay: "+919056397991",
+  phone: "+91 90563 97991",
+  phoneDisplay: "+91 90563 97991",
   contact: "Tyrol",
   rate: 96.5,
   fees: { cash: 5, ecocash: 6 },
@@ -388,7 +388,8 @@ function HowItWorks() {
 
 /* ───────────── Rates + calculator ───────────── */
 function Rates() {
-  const [amount, setAmount] = useState(100);
+  const [amountStr, setAmountStr] = useState("100");
+  const amount = parseFloat(amountStr) || 0;
   const [method, setMethod] = useState("cash");
   const mobile = useIsMobile();
   const pct = DATA.fees[method];
@@ -430,8 +431,14 @@ function Rates() {
         <FadeIn delay={0.1}>
           <div className="cz-glass" style={{ borderRadius: 28, padding: mobile ? "28px 22px" : "36px 34px", height: "100%" }}>
             <label htmlFor="cz-amt" style={{ display: "block", fontSize: ".85rem", fontWeight: 600, color: C.mute, marginBottom: 8 }}>You send (USD)</label>
-            <input id="cz-amt" className="cz-input" type="number" min="1" inputMode="decimal" value={amount}
-              onChange={(e) => setAmount(Math.max(0, Number(e.target.value) || 0))} />
+            <input id="cz-amt" className="cz-input" type="text" inputMode="decimal" autoComplete="off" placeholder="0" value={amountStr}
+              onChange={(e) => {
+                let v = e.target.value.replace(/[^0-9.]/g, "");
+                const i = v.indexOf(".");
+                if (i !== -1) v = v.slice(0, i + 1) + v.slice(i + 1).replace(/\./g, "");
+                v = v.replace(/^0+(?=\d)/, "");
+                setAmountStr(v);
+              }} />
 
             <div style={{ fontSize: ".85rem", fontWeight: 600, color: C.mute, margin: "18px 0 8px" }}>Pay with</div>
             <div className="cz-seg" role="group" aria-label="Payment method">
